@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500&display=swap");
 * {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   outline: none;
   border: none;
   text-decoration: none;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 html {
@@ -81,19 +81,19 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
   -webkit-transform: translateY(-20rem);
-          transform: translateY(-20rem);
+  transform: translateY(-20rem);
 }
 
 .header.active {
   -webkit-transform: translateY(0rem);
-          transform: translateY(0rem);
+  transform: translateY(0rem);
 }
 
 .header .logo {
@@ -121,7 +121,7 @@ section {
   font-size: 2rem;
   background: #fff;
   color: #000;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   text-align: center;
   cursor: pointer;
 }
@@ -146,20 +146,20 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0 9%;
   border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
   border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
   height: 6rem;
   gap: 1rem;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
 .header .search-form.active {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .header .search-form input {
@@ -196,7 +196,7 @@ section {
   height: 20rem;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   z-index: 10;
 }
 
@@ -207,7 +207,7 @@ section {
   height: 40rem;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   z-index: 5;
 }
 
@@ -216,7 +216,7 @@ section {
   top: 20rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   width: 30vw;
   z-index: 1;
 }
@@ -241,7 +241,7 @@ section {
   bottom: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   width: 100%;
   text-align: center;
   z-index: 3;
@@ -264,13 +264,19 @@ section {
 }
 
 .home::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 5rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(transparent),
+    to(#000)
+  );
   background: linear-gradient(transparent, #000);
   z-index: 12;
 }
@@ -280,17 +286,17 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 3rem;
 }
 
 .about .image {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 42rem;
-          flex: 1 1 42rem;
+  -ms-flex: 1 1 42rem;
+  flex: 1 1 42rem;
 }
 
 .about .image img {
@@ -299,8 +305,8 @@ section {
 
 .about .content {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 42rem;
-          flex: 1 1 42rem;
+  -ms-flex: 1 1 42rem;
+  flex: 1 1 42rem;
 }
 
 .about .content span {
@@ -325,8 +331,8 @@ section {
 .products .box-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  -ms-grid-columns: (minmax(31rem, 1fr)) [auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
   gap: 2rem;
 }
 
@@ -336,12 +342,12 @@ section {
 
 .products .box-container .box:hover .image img {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .products .box-container .box:hover .image .icons {
   -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 
 .products .box-container .box .image {
@@ -365,14 +371,14 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: .5rem;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.5rem;
   -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 
 .products .box-container .box .image .icons a {
@@ -394,7 +400,7 @@ section {
 }
 
 .products .box-container .box .content .stars {
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
 }
 
 .products .box-container .box .content .stars i {
@@ -423,8 +429,8 @@ section {
 .services .box-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  -ms-grid-columns: (minmax(31rem, 1fr)) [auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
   gap: 2rem;
 }
 
@@ -435,12 +441,12 @@ section {
 
 .services .box-container .box:nth-child(even) {
   background: #0a0a0a;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .services .box-container .box:hover i {
   -webkit-transform: translateY(-1rem);
-          transform: translateY(-1rem);
+  transform: translateY(-1rem);
 }
 
 .services .box-container .box i {
@@ -470,13 +476,13 @@ section {
 
 .gallery .box-container {
   -webkit-columns: 25rem 3;
-          columns: 25rem 3;
+  columns: 25rem 3;
   gap: 1.5rem;
 }
 
 .gallery .box-container img {
   width: 100%;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -515,8 +521,8 @@ section {
 .blogs .box-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  -ms-grid-columns: (minmax(31rem, 1fr)) [auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
   gap: 2rem;
 }
 
@@ -526,7 +532,7 @@ section {
 
 .blogs .box-container .box:hover .images img {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .blogs .box-container .box .images {
@@ -538,7 +544,7 @@ section {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .blogs .box-container .box .content {
@@ -564,11 +570,11 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 2rem;
   background-color: #0a0a0a;
   margin-top: 2rem;
@@ -581,7 +587,7 @@ section {
 
 .blogs .box-container .box .content .icons a i {
   color: #0097e6;
-  padding-right: .5rem;
+  padding-right: 0.5rem;
 }
 
 .blogs .box-container .box .content .icons a:hover {
@@ -595,8 +601,8 @@ section {
 .footer .box-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  -ms-grid-columns: (minmax(25rem, 1fr)) [auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 2rem;
 }
 
@@ -617,7 +623,7 @@ section {
 
 .footer .box-container .box .link i {
   color: #0097e6;
-  padding-right: .5rem;
+  padding-right: 0.5rem;
 }
 
 .footer .box-container .box .link:hover {
@@ -649,7 +655,7 @@ section {
   font-size: 2rem;
   background-color: #fff;
   color: #000;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   text-align: center;
 }
 
@@ -672,6 +678,10 @@ section {
   color: #0097e6;
 }
 
+
+
+
+/*    Media    */
 @media (max-width: 1200px) {
   .header {
     padding: 1.5rem 2rem;
@@ -697,11 +707,11 @@ section {
     border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
     border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
   .header .navbar.active {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   .header .navbar a {
     display: block;
